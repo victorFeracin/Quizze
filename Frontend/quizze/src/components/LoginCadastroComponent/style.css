@@ -30,8 +30,11 @@
 }
 
 .right-container {
-    background-color: #000000;
+    background-color: #212529;
     width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .small-container {

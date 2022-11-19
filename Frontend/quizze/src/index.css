@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root, .App {
   max-width: unset;
-  padding: 0;
 }
 
 #root, .App, body, html {
   height: 100%;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   max-width: unset;
-  padding: 0;
-  margin: 0;
   height: 100%;
 }
