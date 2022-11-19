@@ -1,16 +1,17 @@
 import './style.css'
 
-
-function LoginCadastroComponent() {
+function LoginCadastroComponent({children}) {
     return(
         <section className="full-section">
             <div className="left-container">
                 <div className='small-container'>
                     <h4>Quizze</h4>
-                    <p>Encontre e se conecte com profissionais de forma rápida e fácil </p>
+                    <p>Sua plataforma de quizzes online!</p>
                 </div>
             </div>
-            <div className="right-container"></div>
+            <div className="right-container">
+                {children}
+            </div>
         </section>
     )
 }
