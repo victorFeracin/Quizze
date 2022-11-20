@@ -6,9 +6,9 @@ export const baseUrl = axios.create({
 })
 
 //Usuario
-export const createUser = async (email, password, name) => {
+export const createUser = async (email, password, name, userType) => {
   try {
-    const response = await baseUrl.post('/users', { email, password, name, userType: 'u'});
+    const response = await baseUrl.post('/usuario', { email, password, name, userType });
     return response.data;
   } catch (error) {
     toast.warn("Error: "+ error.response.data);
