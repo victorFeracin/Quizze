@@ -17,7 +17,7 @@ const validationSchema = Yup.object({
 
 function LoginFormComponent() {
     const dispatch = useDispatch();
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -27,13 +27,12 @@ function LoginFormComponent() {
         onSubmit: async values => {
             const { email, password } = values;
             const accessToken = await loginUser(email, password);
-            console.log("TOKEN: ", accessToken);
             const decoded = jwt_decode(accessToken);
             // localStorage.setItem('clientToken', accessToken);
             // localStorage.setItem('clientInfo', JSON.stringify(decoded));
             dispatch(signIn({id: decoded.id, email: decoded.email, name: decoded.name, isLogged: true, accessToken}));
             baseUrl.defaults.headers["Authorization"] = `Bearer ${accessToken}`
-            // navigate('/');
+            navigate('/home');
             toast("Seja bem-vindo(a)!")
         }
     })

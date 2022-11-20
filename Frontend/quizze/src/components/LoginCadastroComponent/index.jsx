@@ -1,4 +1,4 @@
-import './style.css'
+import './style.css';
 
 function LoginCadastroComponent({children}) {
     return (
@@ -14,6 +14,6 @@ function LoginCadastroComponent({children}) {
             </div>
         </section>
     )
-}
+};
 
-export default LoginCadastroComponent
+export default LoginCadastroComponent;

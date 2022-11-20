@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <ToastContainer autoClose={1000} pauseOnHover={false} pauseOnFocusLoss={false} limit={1}/>
+        <ToastContainer autoClose={1000} pauseOnHover={false} pauseOnFocusLoss={false} limit={1} theme={"dark"}/>
         <App />
       </PersistGate>
     </Provider>

@@ -15,7 +15,7 @@ const validationSchema = Yup.object({
 
 function CadastroFormComponent() {
   // const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
         name: "",
@@ -29,6 +29,7 @@ function CadastroFormComponent() {
           const { name, email, password, userType } = values;
           await createUser(email, password, name, userType);
           toast("Cadastro realizado com sucesso!");
+          navigate('/home');
         } catch (error) {
             toast.warn("Erro ao cadastrar cliente: "+ error.response.data);
         }

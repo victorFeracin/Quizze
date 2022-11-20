@@ -1,0 +1,58 @@
+.homeContainer {
+  display: flex;
+  background-color: #212529;
+  min-height: 100%;
+  padding: 50px;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.homeTitle {
+  font-size: 26px;
+}
+
+.gameCardsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.gameCardsContainer a {
+  text-decoration: none;
+}
+
+.gameCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 400px;
+  height: 350px;
+  background-color: #343a40;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.gameCard:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+.gameCardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 4px 8px;
+}
+
+@media screen and (max-width: 1377px) {
+  .gameCard {
+    width: 350px;
+    height: 305px;
+  }
+}
