@@ -5,6 +5,7 @@ import RequireAuth from "./RequiredAuth";
 import Login from '../pages/login';
 import Cadastro from '../pages/cadastro';
 import Home from '../pages/home';
+import Pergunta from '../pages/Pergunta';
 
 
 const AppRoutes = () => {
@@ -13,7 +14,9 @@ const AppRoutes = () => {
                   <Routes>
                       <Route path='/' element={<Login />} />
                       <Route path='/cadastro' element={<Cadastro />} />
-                      <Route path='/home' element={<RequireAuth><Home /></RequireAuth>} />
+                      <Route path='/home' element={<Home />} />
+                      <Route path='/perguntas' element={<Pergunta />} />
+                      {/*  <Route path='/home' element={<RequireAuth><Home /></RequireAuth>} /> */}
                   </Routes>
       </BrowserRouter>
   )

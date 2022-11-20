@@ -8,7 +8,7 @@ function HomeComponent () {
       <h1 className='homeTitle'>Escolha um dos temas e comece a jogar!</h1>
 
       <div className='gameCardsContainer'>
-        <Link to={`/session/${'id'}`} className='gameCard'>
+        <Link to={`/perguntas?${'id'}`} className='gameCard'>
           <img src={themeImg} alt="Imagem do tema" />
           <div className='gameCardInfo'>
             <h2 className='gameCardTitle'>Lorem Ipsum</h2>
@@ -16,7 +16,7 @@ function HomeComponent () {
           </div>
         </Link>
 
-        <Link to={`/session/${'id'}`} className='gameCard'>
+        <Link to={`/perguntas?${'id'}`} className='gameCard'>
           <img src={themeImg} alt="Imagem do tema" />
           <div className='gameCardInfo'>
             <h2 className='gameCardTitle'>Lorem Ipsum</h2>
@@ -24,7 +24,7 @@ function HomeComponent () {
           </div>
         </Link>
 
-        <Link to={`/session/${'id'}`} className='gameCard'>
+        <Link to={`/perguntas?${'id'}`} className='gameCard'>
           <img src={themeImg} alt="Imagem do tema" />
           <div className='gameCardInfo'>
             <h2 className='gameCardTitle'>Lorem Ipsum</h2>
@@ -32,7 +32,7 @@ function HomeComponent () {
           </div>
         </Link>
 
-        <Link to={`/session/${'id'}`} className='gameCard'>
+        <Link to={`/perguntas?${'id'}`} className='gameCard'>
           <img src={themeImg} alt="Imagem do tema" />
           <div className='gameCardInfo'>
             <h2 className='gameCardTitle'>Lorem Ipsum</h2>
@@ -40,7 +40,7 @@ function HomeComponent () {
           </div>
         </Link>
 
-        <Link to={`/session/${'id'}`} className='gameCard'>
+        <Link to={`/perguntas?${'id'}`} className='gameCard'>
           <img src={themeImg} alt="Imagem do tema" />
           <div className='gameCardInfo'>
             <h2 className='gameCardTitle'>Lorem Ipsum</h2>
