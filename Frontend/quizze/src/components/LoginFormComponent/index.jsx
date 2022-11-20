@@ -1,11 +1,13 @@
 import React from 'react';
 import './style.css';
+import { loginUser, baseUrl } from "../../services/api";
 import * as Yup from 'yup';
 import { Form, Link } from 'react-router-dom';
 import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useDispatch } from "react-redux";
+import { signIn } from "../../redux/feature/userSlice";
 import jwt_decode from 'jwt-decode';
 
 const validationSchema = Yup.object({
@@ -14,8 +16,8 @@ const validationSchema = Yup.object({
 });
 
 function LoginFormComponent() {
-  // const dispatch = useDispatch();
-  // const navigate = useNavigate();
+    const dispatch = useDispatch();
+    // const navigate = useNavigate();
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -23,21 +25,22 @@ function LoginFormComponent() {
         },
         validationSchema,
         onSubmit: async values => {
-            // const { email, password } = values;
-            // const accessToken = await loginClient(email, password);
-            // const decoded = jwt_decode(accessToken);
-            // // localStorage.setItem('clientToken', accessToken);
-            // // localStorage.setItem('clientInfo', JSON.stringify(decoded));
-            // dispatch(signIn({id_client: decoded.id, name: decoded.name, email: decoded.email, isLogged: true, accessToken}));
-            // baseUrl.defaults.headers["Authorization"] = `Bearer ${accessToken}`
+            const { email, password } = values;
+            const accessToken = await loginUser(email, password);
+            console.log("TOKEN: ", accessToken);
+            const decoded = jwt_decode(accessToken);
+            // localStorage.setItem('clientToken', accessToken);
+            // localStorage.setItem('clientInfo', JSON.stringify(decoded));
+            dispatch(signIn({id: decoded.id, email: decoded.email, name: decoded.name, isLogged: true, accessToken}));
+            baseUrl.defaults.headers["Authorization"] = `Bearer ${accessToken}`
             // navigate('/');
-            // toast("Seja bem-vindo(a)!")
+            toast("Seja bem-vindo(a)!")
         }
     })
 
   return (
     <section className='loginContainer'>
-      <form className='formContainer' onSubmit={''}>
+      <form className='formContainer' onSubmit={formik.handleSubmit}>
         <h1 className='titleForm'>Login</h1>
         {
           formik.errors.email
