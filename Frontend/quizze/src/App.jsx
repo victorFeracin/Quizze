@@ -1,14 +1,12 @@
 import { useState } from 'react'
 import './index.css'
-import Login from './pages/login'
-import Cadastro from './pages/Cadastro'
+import AppRoutes from './routes/routes'
 
 function App() {
 
   return (
     <div className="App">
-      {/*<Login />*/}
-      <Cadastro />
+      <AppRoutes/>
     </div>
   )
 }

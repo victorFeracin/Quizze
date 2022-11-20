@@ -13,7 +13,7 @@ const validationSchema = Yup.object({
   password: Yup.string().required("Valor é requerido"),
 });
 
-function LoginCadastroComponent() {
+function LoginFormComponent() {
   // const dispatch = useDispatch();
   // const navigate = useNavigate();
     const formik = useFormik({
@@ -91,10 +91,10 @@ function LoginCadastroComponent() {
           </div>
           }
           <button className='formButton' type='submit'>Entrar</button>
-          <span>Não possui conta? Cadastre-se</span>
+          <span>Não possui conta? <Link to='/cadastro' className='cadastroLink'>Cadastre-se</Link></span>
       </form>
     </section>
   )
 }
 
-export default LoginCadastroComponent;
+export default LoginFormComponent;

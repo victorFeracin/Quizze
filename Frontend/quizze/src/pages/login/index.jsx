@@ -1,9 +1,11 @@
+import LoginCadastroComponent from '../../components/LoginCadastroComponent'
+import LoginFormComponent from '../../components/LoginFormComponent'
 
 function Login(){
     return (
-        <div>
-            <span>Login</span>
-        </div>
+        <LoginCadastroComponent>
+            <LoginFormComponent />
+        </LoginCadastroComponent>
     )
 }
 

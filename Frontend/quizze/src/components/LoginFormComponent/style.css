@@ -59,6 +59,17 @@
   transition: .3s;
 }
 
+.cadastroLink {
+  text-decoration: none;
+  color: #C2255C;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.cadastroLink:hover {
+  transition: .3s;
+  text-decoration: underline;
+}
 
 
 /*Media queries*/

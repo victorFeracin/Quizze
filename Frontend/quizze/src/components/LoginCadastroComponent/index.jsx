@@ -1,7 +1,7 @@
 import './style.css'
 
 function LoginCadastroComponent({children}) {
-    return(
+    return (
         <section className="full-section">
             <div className="left-container">
                 <div className='small-container'>
