@@ -24,3 +24,13 @@ export const createUser = async (email, password, name, userType) => {
     toast.warn("Error: "+ error.response.data);
   }
 }
+
+//Grupos
+export const getGrupos = async () => {
+  try {
+    const response = await baseUrl.get('/grupo');
+    return response.data;
+  } catch (error) {
+    toast.warn("Error: "+ error.response.data);
+  }
+}

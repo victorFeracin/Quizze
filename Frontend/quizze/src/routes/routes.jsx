@@ -14,8 +14,8 @@ const AppRoutes = () => {
                   <Routes>
                       <Route path='/' element={<Login />} />
                       <Route path='/cadastro' element={<Cadastro />} />
-                      <Route path='/perguntas' element={<RequireAuth><Pergunta /></RequireAuth>} />
-                      <Route path='/home' element={<RequireAuth><Home /></RequireAuth>} />
+                      <Route path='/perguntas' element={<Pergunta />} />
+                      <Route path='/home' element={<Home />} />
                   </Routes>
       </BrowserRouter>
   )
