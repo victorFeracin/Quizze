@@ -1,6 +1,7 @@
 import './style.css';
 
 import HeaderComponent from "../../components/HeaderComponent";
+import CardDataProfile from "../../components/CardDataProfile";
 import { Link } from 'react-router-dom';
 
 function Profile(){
@@ -8,13 +9,11 @@ function Profile(){
         <>
             <HeaderComponent />
             <div className='container-profile'>
-                <h2 className="title">Bem-vindo, usuário !</h2>
-                <div className='container-btns'>
+                <CardDataProfile />
+                <div className='card-data btns'>
                     <button className='formButton' type='button'>Histórico de Partidas</button>
                     <button className='formButton' type='button'>Conquistas</button>
-                    <button className='formButton' type='button'>
-                        <Link to='/editProfile'>Editar Perfil</Link>
-                    </button>
+                    <button className='formButton' type='button'>Lista de troféus</button>
                 </div>
             </div>
         </>

@@ -1,0 +1,35 @@
+.card-data {
+    background-color: #373B3E;
+    height: 100%;
+    max-width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 540px;
+    width: 100%;
+}
+
+.card-data .formButton {
+    margin-bottom: 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 42px;
+}
+
+.card-data p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.2;
+}
+
+.card-data h2 {
+    margin-bottom: 28px;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.card-data.btns button{
+    min-height: 75px;
+}

@@ -3,6 +3,12 @@
     background-color: #212529;
     min-height: 100%;
     padding: 50px;
-    flex-direction: column;
+    flex-direction: row;
     gap: 80px;
+    justify-content: space-between;
+}
+
+.container-wd {
+    max-width: 1400px;
+    margin: 0 auto;
 }
