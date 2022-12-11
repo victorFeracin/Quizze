@@ -4,6 +4,7 @@ const routes = express.Router();
 const UsuarioController = new (require('../controllers/usuarioController'));
 const GrupoPerguntaController = new (require('../controllers/grupoPerguntaController'));
 const PerguntaController = new (require('../controllers/perguntaController'));
+const RespostasController = new (require('../controllers/respostasController'));
 const createUsuarioValidation = require('../validation/Usuario/createUsuarioValidation');
 const createPerguntaValidation = require('../validation/Pergunta/createPerguntaValidation');
 
@@ -28,5 +29,10 @@ routes.post('/pergunta/:id', autenticador, isAdmin('a'), createPerguntaValidatio
 routes.get('/pergunta', PerguntaController.listarPergunta);
 routes.get('/pergunta/:id', PerguntaController.listarPorGrupo);
 routes.get('/perguntaUnica/:id', PerguntaController.listarPerguntaId);
+
+//Resposta
+routes.post('/resposta/:id', autenticador, isAdmin('a'), RespostasController.cadastrarRespostas);
+routes.get('/resposta/:id', RespostasController.listarRespostasPergunta);
+routes.get('/respostaUnica/:id', RespostasController.listarRespostasId);
 
 module.exports = routes;
