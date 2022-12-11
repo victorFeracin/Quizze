@@ -6,7 +6,9 @@ const GrupoPerguntaController = new (require('../controllers/grupoPerguntaContro
 const PerguntaController = new (require('../controllers/perguntaController'));
 const RespostasController = new (require('../controllers/respostasController'));
 const createUsuarioValidation = require('../validation/Usuario/createUsuarioValidation');
+const createGrupoPerguntaValidation = require('../validation/GrupoPergunta/createGrupoPerguntaValidation');
 const createPerguntaValidation = require('../validation/Pergunta/createPerguntaValidation');
+const createRespostasValidation = require('../validation/Respostas/createRespostasValidation');
 
 const authController = require('../controllers/authController')
 const loginValidation = require('../validation/auth/authLogin')
@@ -21,7 +23,7 @@ routes.post('/login', loginValidation, authController.login)
 routes.post('/usuario', createUsuarioValidation, UsuarioController.cadastrarUsuario);
 
 //Grupo Pergunta
-routes.post('/grupo', autenticador, isAdmin('a'), GrupoPerguntaController.cadastrarGrupoPergunta);
+routes.post('/grupo', autenticador, isAdmin('a'), createGrupoPerguntaValidation, GrupoPerguntaController.cadastrarGrupoPergunta);
 routes.get('/grupo', GrupoPerguntaController.listarGrupoPergunta)
 
 //Pergunta
@@ -31,7 +33,7 @@ routes.get('/pergunta/:id', PerguntaController.listarPorGrupo);
 routes.get('/perguntaUnica/:id', PerguntaController.listarPerguntaId);
 
 //Resposta
-routes.post('/resposta/:id', autenticador, isAdmin('a'), RespostasController.cadastrarRespostas);
+routes.post('/resposta/:id', autenticador, isAdmin('a'), createRespostasValidation, RespostasController.cadastrarRespostas);
 routes.get('/resposta/:id', RespostasController.listarRespostasPergunta);
 routes.get('/respostaUnica/:id', RespostasController.listarRespostasId);
 
