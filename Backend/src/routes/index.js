@@ -26,5 +26,7 @@ routes.get('/grupo', GrupoPerguntaController.listarGrupoPergunta)
 //Pergunta
 routes.post('/pergunta/:id', autenticador, isAdmin('a'), createPerguntaValidation, PerguntaController.cadastrarPergunta);
 routes.get('/pergunta', PerguntaController.listarPergunta);
+routes.get('/pergunta/:id', PerguntaController.listarPorGrupo);
+routes.get('/perguntaUnica/:id', PerguntaController.listarPerguntaId);
 
 module.exports = routes;
