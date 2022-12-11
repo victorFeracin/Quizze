@@ -1,0 +1,8 @@
+.container-profile{
+    display: flex;
+    background-color: #212529;
+    min-height: 100%;
+    padding: 50px;
+    flex-direction: column;
+    gap: 80px;
+}

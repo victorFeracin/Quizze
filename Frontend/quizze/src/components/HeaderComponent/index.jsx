@@ -21,7 +21,7 @@ function HeaderComponent () {
       <div className='menuContainer'>
         <ul className='menu'>
           <li className='btnHeader'><Link to='/home'>Home</Link></li>
-          <li className='btnHeader'><Link to={`/perfil/${"id"}`}>Perfil</Link></li>
+          <li className='btnHeader'><Link to={`/profile`}>Perfil</Link></li>
           <li><button onClick={handleSignOut}>Sair</button></li>
         </ul>
       </div>

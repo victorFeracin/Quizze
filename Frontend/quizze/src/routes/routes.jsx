@@ -6,6 +6,8 @@ import Login from '../pages/login';
 import Cadastro from '../pages/cadastro';
 import Home from '../pages/home';
 import Pergunta from '../pages/Pergunta';
+import Profile from '../pages/Profile';
+import EditProfile from '../pages/editProfile';
 
 
 const AppRoutes = () => {
@@ -16,6 +18,8 @@ const AppRoutes = () => {
                       <Route path='/cadastro' element={<Cadastro />} />
                       <Route path='/perguntas' element={<Pergunta />} />
                       <Route path='/home' element={<Home />} />
+                      <Route path='/profile' element={<Profile />} />
+                      <Route path='/editProfile' element={<EditProfile />} />
                   </Routes>
       </BrowserRouter>
   )

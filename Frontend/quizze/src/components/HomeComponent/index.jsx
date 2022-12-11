@@ -40,6 +40,13 @@ const HomeComponent = () => {
           </Link>
         )
       })}
+          <Link to={`/perguntas?${'id'}`} className='gameCard'>
+            <img src={themeImg} alt="Imagem do tema" />
+            <div className='gameCardInfo'>
+              <h2 className='gameCardTitle'>Lorem Ipsum</h2>
+              <p className='gameCardDescription'>Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum</p>
+            </div>
+          </Link>
       </div>
     </div>
   );
